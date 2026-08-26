@@ -174,3 +174,18 @@ footer{text-align:center;padding:35px;color:#71657c;font-size:11px;border-top:1p
 .gift.opened{animation:giftOpen .6s ease}
 @keyframes giftOpen{0%{transform:scale(1)}50%{transform:scale(1.25) rotate(-8deg)}100%{transform:scale(1) rotate(0)}}
 @media(max-width:560px){.birthday-today{font-size:20px;padding:15px}.reveal-card,.blessings,.memory-reveal,.final-reveal{padding:22px}.reveal-btn{width:100%;margin-left:0;margin-right:0}}
+/* LOCK ENTIRE WEBSITE BEFORE BIRTHDAY */
+
+body.birthday-locked {
+  overflow: hidden;
+}
+
+body.birthday-locked > *:not(#birthdayLock) {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.birthday-locked #birthdayLock {
+  visibility: visible;
+  pointer-events: auto;
+}
